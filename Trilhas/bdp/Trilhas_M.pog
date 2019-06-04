@@ -1,0 +1,2569 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="lprp"/>
+<Define name="inprp">
+<Attr>
+<Pos l="8" s="4" c="1"/>
+</Attr>
+<Set>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="9" s="6" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id value="PLAYERS" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:1:2:1" typref="3369446765">
+<Attr>
+<Pos l="9" s="7" c="13"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="player_1" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:1:2:2:1" typref="3933013398">
+<Attr>
+<Pos l="9" s="8" c="24"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:1:2:2:2" typref="3933013398">
+<Attr>
+<Pos l="9" s="8" c="34"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Attr>
+<Pos l="11" s="10" c="1"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="12" s="1" c="18"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="12" s="4" c="5"/>
+</Attr>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:3:1:1:1" typref="462640250">
+<Attr>
+<Pos l="12" s="6" c="10"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="18" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:3:1:2" typref="2701647786">
+<Attr>
+<Pos l="12" s="2" c="20"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Define>
+<Define name="inext">
+<Attr>
+<Pos l="17" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((board) : (((PIECES) >+> (((0) .. (23))))))" op=":">
+<Attr>
+<Pos l="18" s="1" c="11"/>
+</Attr>
+<Id value="board" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:1:1" typref="3073067903">
+<Attr>
+<Pos l="18" s="5" c="5"/>
+</Attr>
+</Id>
+<Binary_Exp op=">+>" typref="808259610">
+<Attr>
+<Pos l="18" s="3" c="20"/>
+</Attr>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:1:2:1" typref="462640250">
+<Attr>
+<Pos l="18" s="6" c="13"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="18" s="2" c="25"/>
+</Attr>
+<Integer_Literal value="0" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:1:2:2:1" typref="2701647786">
+<Attr>
+<Pos l="18" s="1" c="24"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:1:2:2:2" typref="2701647786">
+<Attr>
+<Pos l="18" s="2" c="27"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="pieces_w : POW( PIECES)" op="&lt;:">
+<Attr>
+<Pos l="19" s="2" c="14"/>
+</Attr>
+<Id value="pieces_w" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:2:1" typref="462640250">
+<Attr>
+<Pos l="19" s="8" c="5"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:2:2" typref="462640250">
+<Attr>
+<Pos l="19" s="6" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((card(pieces_w)) = ((card(PIECES) / 2)))" op="=">
+<Attr>
+<Pos l="19" s="1" c="41"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="19" s="4" c="26"/>
+</Attr>
+<Id value="pieces_w" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:3:1:1" typref="462640250">
+<Attr>
+<Pos l="19" s="8" c="31"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Binary_Exp op="/" typref="2701647786">
+<Attr>
+<Pos l="19" s="1" c="55"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="19" s="4" c="43"/>
+</Attr>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:3:2:1:1" typref="462640250">
+<Attr>
+<Pos l="19" s="6" c="48"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:3:2:2" typref="2701647786">
+<Attr>
+<Pos l="19" s="1" c="56"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="pieces_b : POW( PIECES)" op="&lt;:">
+<Attr>
+<Pos l="20" s="2" c="14"/>
+</Attr>
+<Id value="pieces_b" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:4:1" typref="462640250">
+<Attr>
+<Pos l="20" s="8" c="5"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:4:2" typref="462640250">
+<Attr>
+<Pos l="20" s="6" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((card(pieces_b)) = ((card(PIECES) / 2)))" op="=">
+<Attr>
+<Pos l="20" s="1" c="41"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="20" s="4" c="26"/>
+</Attr>
+<Id value="pieces_b" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:5:1:1" typref="462640250">
+<Attr>
+<Pos l="20" s="8" c="31"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Binary_Exp op="/" typref="2701647786">
+<Attr>
+<Pos l="20" s="1" c="55"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="20" s="4" c="43"/>
+</Attr>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:5:2:1:1" typref="462640250">
+<Attr>
+<Pos l="20" s="6" c="48"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:5:2:2" typref="2701647786">
+<Attr>
+<Pos l="20" s="1" c="56"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((has_moinho) : (BOOL))" op=":">
+<Attr>
+<Pos l="21" s="1" c="16"/>
+</Attr>
+<Id value="has_moinho" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:6:1" typref="2043437594">
+<Attr>
+<Pos l="21" s="10" c="5"/>
+</Attr>
+</Id>
+<Id value="BOOL" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:6:2" typref="4282494527">
+<Attr>
+<Pos l="21" s="4" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="inv">
+<Attr>
+<Pos l="14" s="9" c="1"/>
+</Attr>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="15" s="1" c="17"/>
+</Attr>
+<Id initialTag="last_player" value="last_player" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:3:1:1" typref="3933013398">
+<Attr>
+<Pos l="15" s="11" c="5"/>
+</Attr>
+</Id>
+<Id initialTag="PLAYERS" value="PLAYERS" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:3:1:2" typref="3369446765">
+<Attr>
+<Pos l="15" s="7" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Define>
+<Define name="ass"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="17" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((board) : (((PIECES) >+> (((0) .. (23))))))" op=":">
+<Attr>
+<Pos l="18" s="1" c="11"/>
+</Attr>
+<EmptySet tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:1:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:1:1:1" typref="3073067903">
+<Attr>
+<Pos l="24" s="5" c="5"/>
+</Attr>
+</EmptySet>
+<Binary_Exp op=">+>" typref="808259610">
+<Attr>
+<Pos l="18" s="3" c="20"/>
+</Attr>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:1:2:1" typref="462640250">
+<Attr>
+<Pos l="18" s="6" c="13"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="18" s="2" c="25"/>
+</Attr>
+<Integer_Literal value="0" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:1:2:2:1" typref="2701647786">
+<Attr>
+<Pos l="18" s="1" c="24"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:1:2:2:2" typref="2701647786">
+<Attr>
+<Pos l="18" s="2" c="27"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="pieces_w : POW( PIECES)" op="&lt;:">
+<Attr>
+<Pos l="19" s="2" c="14"/>
+</Attr>
+<Id value="xx" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:3:1:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:3:1:1:1" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:2:2" typref="462640250">
+<Attr>
+<Pos l="19" s="6" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((card(pieces_w)) = ((card(PIECES) / 2)))" op="=">
+<Attr>
+<Pos l="19" s="1" c="41"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="19" s="4" c="26"/>
+</Attr>
+<Id value="xx" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:3:1:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:3:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:3:1:1:1" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Binary_Exp op="/" typref="2701647786">
+<Attr>
+<Pos l="19" s="1" c="55"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="19" s="4" c="43"/>
+</Attr>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:3:2:1:1" typref="462640250">
+<Attr>
+<Pos l="19" s="6" c="48"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:3:2:2" typref="2701647786">
+<Attr>
+<Pos l="19" s="1" c="56"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="pieces_b : POW( PIECES)" op="&lt;:">
+<Attr>
+<Pos l="20" s="2" c="14"/>
+</Attr>
+<Id value="yy" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:3:1:2:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:4:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:3:1:1:2" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="13"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:4:2" typref="462640250">
+<Attr>
+<Pos l="20" s="6" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((card(pieces_b)) = ((card(PIECES) / 2)))" op="=">
+<Attr>
+<Pos l="20" s="1" c="41"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="20" s="4" c="26"/>
+</Attr>
+<Id value="yy" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:3:1:2:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:5:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:3:1:1:2" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Binary_Exp op="/" typref="2701647786">
+<Attr>
+<Pos l="20" s="1" c="55"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="20" s="4" c="43"/>
+</Attr>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:5:2:1:1" typref="462640250">
+<Attr>
+<Pos l="20" s="6" c="48"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:5:2:2" typref="2701647786">
+<Attr>
+<Pos l="20" s="1" c="56"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((has_moinho) : (BOOL))" op=":">
+<Attr>
+<Pos l="21" s="1" c="16"/>
+</Attr>
+<Boolean_Literal value="FALSE" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:3:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:6:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:3:1:1" typref="2043437594">
+<Attr>
+<Pos l="31" s="10" c="5"/>
+</Attr>
+</Boolean_Literal>
+<Id value="BOOL" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:4:1:6:2" typref="4282494527">
+<Attr>
+<Pos l="21" s="4" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:">
+<Attr>
+<Pos l="26" s="2" c="14"/>
+</Attr>
+<Id value="xx" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:1:2" typref="462640250">
+<Attr>
+<Pos l="26" s="6" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:">
+<Attr>
+<Pos l="26" s="2" c="29"/>
+</Attr>
+<Id value="yy" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="13"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:2:2" typref="462640250">
+<Attr>
+<Pos l="26" s="6" c="32"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="27" s="1" c="18"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="27" s="4" c="9"/>
+</Attr>
+<Id value="xx" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:3:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="9" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:3:2" typref="2701647786">
+<Attr>
+<Pos l="27" s="1" c="20"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="27" s="1" c="33"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos l="27" s="4" c="24"/>
+</Attr>
+<Id value="yy" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:4:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value="9" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:4:2" typref="2701647786">
+<Attr>
+<Pos l="27" s="1" c="35"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="28" s="1" c="18"/>
+</Attr>
+<Binary_Exp op="/\" typref="462640250">
+<Attr>
+<Pos l="28" s="2" c="12"/>
+</Attr>
+<Id value="xx" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:5:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:1" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="9"/>
+</Attr>
+</Id>
+<Id value="yy" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:5:1:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:1:2" typref="462640250" suffix="">
+<Attr>
+<Pos l="25" s="2" c="13"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:5:1:2:2:1:5:2" typref="3817003670">
+<Attr>
+<Pos l="28" s="2" c="20"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>play_piece</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" s="1" c="16"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="23" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="PLAYERS" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:1:2" typref="3369446765">
+<Attr>
+<Pos l="23" s="7" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos l="23" s="2" c="31"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:2:1" typref="3933013398">
+<Attr>
+<Pos l="23" s="2" c="28"/>
+</Attr>
+</Id>
+<Id value="last_player" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:2:2" typref="3933013398">
+<Attr>
+<Pos l="23" s="11" c="34"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" s="1" c="51"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:3:1" typref="2882442911">
+<Attr>
+<Pos l="23" s="2" c="48"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:3:2" typref="462640250">
+<Attr>
+<Pos l="23" s="6" c="53"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="24" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="24" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:1:1" typref="3933013398">
+<Attr>
+<Pos l="24" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:1:2" typref="3933013398">
+<Attr>
+<Pos l="24" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="24" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:2:1" typref="2882442911">
+<Attr>
+<Pos l="24" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:2:2" typref="462640250">
+<Attr>
+<Pos l="24" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="25" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="25" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:1:1" typref="3933013398">
+<Attr>
+<Pos l="25" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:1:2" typref="3933013398">
+<Attr>
+<Pos l="25" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="25" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:2:1" typref="2882442911">
+<Attr>
+<Pos l="25" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:2:2" typref="462640250">
+<Attr>
+<Pos l="25" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="26" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:6:1" typref="2701647786">
+<Attr>
+<Pos l="26" s="2" c="14"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="26" s="2" c="20"/>
+</Attr>
+<Integer_Literal value="0" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:6:2:1" typref="2701647786">
+<Attr>
+<Pos l="26" s="1" c="19"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:6:2:2" typref="2701647786">
+<Attr>
+<Pos l="26" s="2" c="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="27" s="2" c="17"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:7:1" typref="2882442911">
+<Attr>
+<Pos l="27" s="2" c="14"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom" typref="462640250">
+<Attr>
+<Pos l="27" s="3" c="20"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:7:2:1" typref="3073067903">
+<Attr>
+<Pos l="27" s="5" c="24"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="27" s="2" c="36"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:8:1" typref="2701647786">
+<Attr>
+<Pos l="27" s="2" c="33"/>
+</Attr>
+</Id>
+<Unary_Exp op="ran" typref="3603043417">
+<Attr>
+<Pos l="27" s="3" c="39"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:8:2:1" typref="3073067903">
+<Attr>
+<Pos l="27" s="5" c="43"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="36" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="28" s="2" c="28"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="36" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="37" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="28" s="2" c="28"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="36" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:2:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="28" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="36" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="37" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:2:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="28" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="37" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>move_piece</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="32" s="1" c="15"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="32" s="2" c="13"/>
+</Attr>
+</Id>
+<Id value="PLAYERS" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:1:2" typref="3369446765">
+<Attr>
+<Pos l="32" s="7" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos l="32" s="2" c="30"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:2:1" typref="3933013398">
+<Attr>
+<Pos l="32" s="2" c="27"/>
+</Attr>
+</Id>
+<Id value="last_player" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:2:2" typref="3933013398">
+<Attr>
+<Pos l="32" s="11" c="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="33" s="1" c="16"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:3:1" typref="2882442911">
+<Attr>
+<Pos l="33" s="2" c="13"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:3:2" typref="462640250">
+<Attr>
+<Pos l="33" s="6" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="33" s="1" c="30"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:4:1" typref="2701647786">
+<Attr>
+<Pos l="33" s="2" c="27"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="33" s="2" c="33"/>
+</Attr>
+<Integer_Literal value="0" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:4:2:1" typref="2701647786">
+<Attr>
+<Pos l="33" s="1" c="32"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:4:2:2" typref="2701647786">
+<Attr>
+<Pos l="33" s="2" c="35"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="34" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="34" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:1:1" typref="3933013398">
+<Attr>
+<Pos l="34" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:1:2" typref="3933013398">
+<Attr>
+<Pos l="34" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="34" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:2:1" typref="2882442911">
+<Attr>
+<Pos l="34" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:2:2" typref="462640250">
+<Attr>
+<Pos l="34" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="35" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="35" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:1:1" typref="3933013398">
+<Attr>
+<Pos l="35" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:1:2" typref="3933013398">
+<Attr>
+<Pos l="35" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="35" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:2:1" typref="2882442911">
+<Attr>
+<Pos l="35" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:2:2" typref="462640250">
+<Attr>
+<Pos l="35" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="36" s="1" c="24"/>
+</Attr>
+<Unary_Exp op="dom" typref="462640250">
+<Attr>
+<Pos l="36" s="3" c="13"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:7:1:1" typref="3073067903">
+<Attr>
+<Pos l="36" s="5" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:7:2" typref="462640250">
+<Attr>
+<Pos l="36" s="6" c="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="36" s="2" c="38"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:8:1" typref="2701647786">
+<Attr>
+<Pos l="36" s="2" c="35"/>
+</Attr>
+</Id>
+<Unary_Exp op="ran" typref="3603043417">
+<Attr>
+<Pos l="36" s="3" c="41"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:8:2:1" typref="3073067903">
+<Attr>
+<Pos l="36" s="5" c="45"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="46" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="2" c="27"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="46" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="47" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:2:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="2" c="27"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="47" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="46" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:2:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="37" s="2" c="31"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="46" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="47" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:2:2,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="37" s="2" c="31"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="47" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_play_piece</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="24" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:1:1" typref="3933013398">
+<Attr>
+<Pos l="24" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:1:2" typref="3933013398">
+<Attr>
+<Pos l="24" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="25" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:1:1" typref="3933013398">
+<Attr>
+<Pos l="25" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:1:2" typref="3933013398">
+<Attr>
+<Pos l="25" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="27" s="2" c="17"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:7:1" typref="2882442911">
+<Attr>
+<Pos l="27" s="2" c="14"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom" typref="462640250">
+<Attr>
+<Pos l="27" s="3" c="20"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:7:2:1" typref="3073067903">
+<Attr>
+<Pos l="27" s="5" c="24"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="26" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:6:1" typref="2701647786">
+<Attr>
+<Pos l="26" s="2" c="14"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="26" s="2" c="20"/>
+</Attr>
+<Integer_Literal value="0" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:6:2:1" typref="2701647786">
+<Attr>
+<Pos l="26" s="1" c="19"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:6:2:2" typref="2701647786">
+<Attr>
+<Pos l="26" s="2" c="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="25" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="25" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:1:1" typref="3933013398">
+<Attr>
+<Pos l="25" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:1:2" typref="3933013398">
+<Attr>
+<Pos l="25" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="25" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:2:1" typref="2882442911">
+<Attr>
+<Pos l="25" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:2:2" typref="462640250">
+<Attr>
+<Pos l="25" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="24" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="24" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:1:1" typref="3933013398">
+<Attr>
+<Pos l="24" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:1:2" typref="3933013398">
+<Attr>
+<Pos l="24" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="24" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:2:1" typref="2882442911">
+<Attr>
+<Pos l="24" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:2:2" typref="462640250">
+<Attr>
+<Pos l="24" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" s="1" c="51"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:3:1" typref="2882442911">
+<Attr>
+<Pos l="23" s="2" c="48"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:3:2" typref="462640250">
+<Attr>
+<Pos l="23" s="6" c="53"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Exp_Comparison op="/=">
+<Attr>
+<Pos l="23" s="2" c="31"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:2:1" typref="3933013398">
+<Attr>
+<Pos l="23" s="2" c="28"/>
+</Attr>
+</Id>
+<Id value="last_player" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:2:2" typref="3933013398">
+<Attr>
+<Pos l="23" s="11" c="34"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" s="1" c="16"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="23" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="PLAYERS" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:1:2" typref="3369446765">
+<Attr>
+<Pos l="23" s="7" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_play_piece</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" s="1" c="16"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="23" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="PLAYERS" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:1:2" typref="3369446765">
+<Attr>
+<Pos l="23" s="7" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos l="23" s="2" c="31"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:2:1" typref="3933013398">
+<Attr>
+<Pos l="23" s="2" c="28"/>
+</Attr>
+</Id>
+<Id value="last_player" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:2:2" typref="3933013398">
+<Attr>
+<Pos l="23" s="11" c="34"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" s="1" c="51"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:3:1" typref="2882442911">
+<Attr>
+<Pos l="23" s="2" c="48"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:3:2" typref="462640250">
+<Attr>
+<Pos l="23" s="6" c="53"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="24" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="24" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:1:1" typref="3933013398">
+<Attr>
+<Pos l="24" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:1:2" typref="3933013398">
+<Attr>
+<Pos l="24" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="24" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:2:1" typref="2882442911">
+<Attr>
+<Pos l="24" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:4:2:2" typref="462640250">
+<Attr>
+<Pos l="24" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="25" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="25" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:1:1" typref="3933013398">
+<Attr>
+<Pos l="25" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:1:2" typref="3933013398">
+<Attr>
+<Pos l="25" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="25" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:2:1" typref="2882442911">
+<Attr>
+<Pos l="25" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:5:2:2" typref="462640250">
+<Attr>
+<Pos l="25" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="26" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:6:1" typref="2701647786">
+<Attr>
+<Pos l="26" s="2" c="14"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="26" s="2" c="20"/>
+</Attr>
+<Integer_Literal value="0" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:6:2:1" typref="2701647786">
+<Attr>
+<Pos l="26" s="1" c="19"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:6:2:2" typref="2701647786">
+<Attr>
+<Pos l="26" s="2" c="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="27" s="2" c="17"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:7:1" typref="2882442911">
+<Attr>
+<Pos l="27" s="2" c="14"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom" typref="462640250">
+<Attr>
+<Pos l="27" s="3" c="20"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:7:2:1" typref="3073067903">
+<Attr>
+<Pos l="27" s="5" c="24"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="27" s="2" c="36"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:8:1" typref="2701647786">
+<Attr>
+<Pos l="27" s="2" c="33"/>
+</Attr>
+</Id>
+<Unary_Exp op="ran" typref="3603043417">
+<Attr>
+<Pos l="27" s="3" c="39"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:2:1:8:2:1" typref="3073067903">
+<Attr>
+<Pos l="27" s="5" c="43"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="36" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="28" s="2" c="36"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="36" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="37" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="28" s="2" c="36"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="39" s="2" c="17"/>
+</Attr>
+<Id value="pi" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:6:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="39" s="2" c="14"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom" typref="462640250">
+<Attr>
+<Pos l="39" s="3" c="20"/>
+</Attr>
+<Id value="board" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:6:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3073067903">
+<Attr>
+<Pos l="39" s="5" c="24"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="38" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:5:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="2701647786">
+<Attr>
+<Pos l="38" s="2" c="14"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="38" s="2" c="20"/>
+</Attr>
+<Integer_Literal value="0" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:5:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="2701647786">
+<Attr>
+<Pos l="38" s="1" c="19"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:5:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="2701647786">
+<Attr>
+<Pos l="38" s="2" c="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="37" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="37" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="28" s="2" c="36"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="37" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="37" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:4:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="37" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="36" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="36" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="28" s="2" c="36"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="36" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="36" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="36" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:3:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="36" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="35" s="1" c="31"/>
+</Attr>
+<Id value="pi" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="35" s="2" c="28"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="35" s="6" c="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="35" s="1" c="16"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="28" s="2" c="36"/>
+</Attr>
+</Id>
+<Id value="PLAYERS" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:1:2:1:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:1:3:1:1:1:1" typref="3369446765">
+<Attr>
+<Pos l="35" s="7" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_move_piece</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="34" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:1:1" typref="3933013398">
+<Attr>
+<Pos l="34" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:1:2" typref="3933013398">
+<Attr>
+<Pos l="34" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="35" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:1:1" typref="3933013398">
+<Attr>
+<Pos l="35" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:1:2" typref="3933013398">
+<Attr>
+<Pos l="35" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="36" s="1" c="24"/>
+</Attr>
+<Unary_Exp op="dom" typref="462640250">
+<Attr>
+<Pos l="36" s="3" c="13"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:7:1:1" typref="3073067903">
+<Attr>
+<Pos l="36" s="5" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:7:2" typref="462640250">
+<Attr>
+<Pos l="36" s="6" c="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="35" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="35" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:1:1" typref="3933013398">
+<Attr>
+<Pos l="35" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:1:2" typref="3933013398">
+<Attr>
+<Pos l="35" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="35" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:2:1" typref="2882442911">
+<Attr>
+<Pos l="35" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:2:2" typref="462640250">
+<Attr>
+<Pos l="35" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="34" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="34" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:1:1" typref="3933013398">
+<Attr>
+<Pos l="34" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:1:2" typref="3933013398">
+<Attr>
+<Pos l="34" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="34" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:2:1" typref="2882442911">
+<Attr>
+<Pos l="34" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:2:2" typref="462640250">
+<Attr>
+<Pos l="34" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="33" s="1" c="30"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:4:1" typref="2701647786">
+<Attr>
+<Pos l="33" s="2" c="27"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="33" s="2" c="33"/>
+</Attr>
+<Integer_Literal value="0" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:4:2:1" typref="2701647786">
+<Attr>
+<Pos l="33" s="1" c="32"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:4:2:2" typref="2701647786">
+<Attr>
+<Pos l="33" s="2" c="35"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="33" s="1" c="16"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:3:1" typref="2882442911">
+<Attr>
+<Pos l="33" s="2" c="13"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:3:2" typref="462640250">
+<Attr>
+<Pos l="33" s="6" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Exp_Comparison op="/=">
+<Attr>
+<Pos l="32" s="2" c="30"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:2:1" typref="3933013398">
+<Attr>
+<Pos l="32" s="2" c="27"/>
+</Attr>
+</Id>
+<Id value="last_player" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:2:2" typref="3933013398">
+<Attr>
+<Pos l="32" s="11" c="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="32" s="1" c="15"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="32" s="2" c="13"/>
+</Attr>
+</Id>
+<Id value="PLAYERS" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:1:2" typref="3369446765">
+<Attr>
+<Pos l="32" s="7" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_move_piece</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="32" s="1" c="15"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="32" s="2" c="13"/>
+</Attr>
+</Id>
+<Id value="PLAYERS" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:1:2" typref="3369446765">
+<Attr>
+<Pos l="32" s="7" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos l="32" s="2" c="30"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:2:1" typref="3933013398">
+<Attr>
+<Pos l="32" s="2" c="27"/>
+</Attr>
+</Id>
+<Id value="last_player" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:2:2" typref="3933013398">
+<Attr>
+<Pos l="32" s="11" c="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="33" s="1" c="16"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:3:1" typref="2882442911">
+<Attr>
+<Pos l="33" s="2" c="13"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:3:2" typref="462640250">
+<Attr>
+<Pos l="33" s="6" c="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="33" s="1" c="30"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:4:1" typref="2701647786">
+<Attr>
+<Pos l="33" s="2" c="27"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="33" s="2" c="33"/>
+</Attr>
+<Integer_Literal value="0" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:4:2:1" typref="2701647786">
+<Attr>
+<Pos l="33" s="1" c="32"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:4:2:2" typref="2701647786">
+<Attr>
+<Pos l="33" s="2" c="35"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="34" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="34" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:1:1" typref="3933013398">
+<Attr>
+<Pos l="34" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:1:2" typref="3933013398">
+<Attr>
+<Pos l="34" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="34" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:2:1" typref="2882442911">
+<Attr>
+<Pos l="34" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:5:2:2" typref="462640250">
+<Attr>
+<Pos l="34" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="35" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="35" s="1" c="17"/>
+</Attr>
+<Id value="pl" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:1:1" typref="3933013398">
+<Attr>
+<Pos l="35" s="2" c="14"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:1:2" typref="3933013398">
+<Attr>
+<Pos l="35" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="35" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:2:1" typref="2882442911">
+<Attr>
+<Pos l="35" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:6:2:2" typref="462640250">
+<Attr>
+<Pos l="35" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="36" s="1" c="24"/>
+</Attr>
+<Unary_Exp op="dom" typref="462640250">
+<Attr>
+<Pos l="36" s="3" c="13"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:7:1:1" typref="3073067903">
+<Attr>
+<Pos l="36" s="5" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:7:2" typref="462640250">
+<Attr>
+<Pos l="36" s="6" c="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos l="36" s="2" c="38"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:8:1" typref="2701647786">
+<Attr>
+<Pos l="36" s="2" c="35"/>
+</Attr>
+</Id>
+<Unary_Exp op="ran" typref="3603043417">
+<Attr>
+<Pos l="36" s="3" c="41"/>
+</Attr>
+<Id value="board" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:2:1:8:2:1" typref="3073067903">
+<Attr>
+<Pos l="36" s="5" c="45"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="46" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="2" c="35"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="46" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=>">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="47" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="2" c="35"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="47" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="48" s="1" c="24"/>
+</Attr>
+<Unary_Exp op="dom" typref="462640250">
+<Attr>
+<Pos l="48" s="3" c="13"/>
+</Attr>
+<Id value="board" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:6:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3073067903">
+<Attr>
+<Pos l="48" s="5" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:6:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="48" s="6" c="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="47" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="47" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="2" c="35"/>
+</Attr>
+</Id>
+<Id value="player_2" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="47" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="47" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="47" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_b" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:5:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="47" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Binary_Pred op="=>">
+<Attr>
+<Pos l="46" s="2" c="28"/>
+</Attr>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="46" s="1" c="17"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="2" c="35"/>
+</Attr>
+</Id>
+<Id value="player_1" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="46" s="8" c="19"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="46" s="1" c="35"/>
+</Attr>
+<Id value="pi" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="46" s="2" c="32"/>
+</Attr>
+</Id>
+<Id value="pieces_w" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:4:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="46" s="8" c="37"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="45" s="1" c="44"/>
+</Attr>
+<Id value="po" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:3:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="2701647786">
+<Attr>
+<Pos l="45" s="2" c="41"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos l="45" s="2" c="47"/>
+</Attr>
+<Integer_Literal value="0" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:3:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="2701647786">
+<Attr>
+<Pos l="45" s="1" c="46"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value="23" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:3:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="2701647786">
+<Attr>
+<Pos l="45" s="2" c="49"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="45" s="1" c="30"/>
+</Attr>
+<Id value="pi" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:2:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="2882442911">
+<Attr>
+<Pos l="45" s="2" c="27"/>
+</Attr>
+</Id>
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:2:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="462640250">
+<Attr>
+<Pos l="45" s="6" c="32"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="45" s="1" c="15"/>
+</Attr>
+<Id value="po" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:2:3,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1,C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:1:1,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3933013398">
+<Attr>
+<Pos l="37" s="2" c="35"/>
+</Attr>
+</Id>
+<Id value="PLAYERS" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:6:2:2:1:1:2,C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:5:2:3:1:1:1:1" typref="3369446765">
+<Attr>
+<Pos l="45" s="7" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="3933013398">
+<Id value="PLAYERS" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:6:1:1"/>
+</Type>
+<Type id="3369446765">
+<Unary_Exp op="POW">
+<Id value="PLAYERS" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:6:2:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2882442911">
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:6:3:1"/>
+</Type>
+<Type id="2701647786">
+<Id value="INTEGER" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:6:4:1"/>
+</Type>
+<Type id="462640250">
+<Unary_Exp op="POW">
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:6:5:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id value="INTEGER" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:6:6:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3073067903">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="PIECES" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:6:7:1:1:1"/>
+<Id value="INTEGER" tag="C:\Users\ohara\Documents\BTI\METODOS FORMAIS\Project\Trilhas\bdp\Trilhas_M.bxml:1:6:7:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="462640250">
+<Unary_Exp op="POW">
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3369446765">
+<Unary_Exp op="POW">
+<Id value="PLAYERS" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:2:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3933013398">
+<Id value="PLAYERS" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:3:1"/>
+</Type>
+<Type id="3073067903">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:4:1:1:1"/>
+<Id value="INTEGER" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:4:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2043437594">
+<Id value="BOOL" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:5:1"/>
+</Type>
+<Type id="2701647786">
+<Id value="INTEGER" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:6:1"/>
+</Type>
+<Type id="808259610">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:7:1:1:1:1"/>
+<Id value="INTEGER" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:7:1:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id value="INTEGER" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:8:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="4282494527">
+<Unary_Exp op="POW">
+<Id value="BOOL" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:9:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:10:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2882442911">
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:11:1"/>
+</Type>
+<Type id="539067738">
+<Binary_Exp op="*">
+<Id value="PIECES" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:12:1:1"/>
+<Id value="INTEGER" tag="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas/bdp\Trilhas.bxml:1:7:12:1:2"/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

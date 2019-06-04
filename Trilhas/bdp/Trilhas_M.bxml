@@ -1,0 +1,620 @@
+<Machine name='Trilhas_M' type='abstraction'>
+<Includes>
+<Attr>
+<Pos l='8' c='1' s='8'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='9' c='5' s='7'/>
+</Attr>
+<Name>Trilhas</Name>
+</Referenced_Machine>
+</Includes>
+<Abstract_Variables>
+<Attr>
+<Pos l='11' c='1' s='18'/>
+</Attr>
+<Id value='last_player' typref='3933013398'>
+<Attr>
+<Pos l='12' c='5' s='11'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='14' c='1' s='9'/>
+</Attr>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='15' c='17' s='1'/>
+</Attr>
+<Id value='last_player' typref='3933013398'>
+<Attr>
+<Pos l='15' c='5' s='11'/>
+</Attr>
+</Id>
+<Id value='PLAYERS' typref='3369446765'>
+<Attr>
+<Pos l='15' c='19' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='17' c='1' s='14'/>
+</Attr>
+<Assignement_Sub>
+<Attr>
+<Pos l='18' c='17' s='2'/>
+</Attr>
+<Variables>
+<Id value='last_player' typref='3933013398'>
+<Attr>
+<Pos l='18' c='5' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='player_2' typref='3933013398'>
+<Attr>
+<Pos l='18' c='20' s='8'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Initialisation>
+<Operations>
+<Operation name='play_piece'>
+<Attr>
+<Pos l='22' c='5' s='10' endLine='29'/>
+</Attr>
+<Input_Parameters>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='22' c='17' s='2'/>
+</Attr>
+</Id>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='22' c='21' s='2'/>
+</Attr>
+</Id>
+<Id value='po' typref='2701647786'>
+<Attr>
+<Pos l='22' c='25' s='2'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='23' c='16' s='1'/>
+</Attr>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='23' c='14' s='2'/>
+</Attr>
+</Id>
+<Id value='PLAYERS' typref='3369446765'>
+<Attr>
+<Pos l='23' c='18' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='23' c='31' s='2'/>
+</Attr>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='23' c='28' s='2'/>
+</Attr>
+</Id>
+<Id value='last_player' typref='3933013398'>
+<Attr>
+<Pos l='23' c='34' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='23' c='51' s='1'/>
+</Attr>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='23' c='48' s='2'/>
+</Attr>
+</Id>
+<Id value='PIECES' typref='462640250'>
+<Attr>
+<Pos l='23' c='53' s='6'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='24' c='28' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='24' c='17' s='1'/>
+</Attr>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='24' c='14' s='2'/>
+</Attr>
+</Id>
+<Id value='player_1' typref='3933013398'>
+<Attr>
+<Pos l='24' c='19' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='24' c='35' s='1'/>
+</Attr>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='24' c='32' s='2'/>
+</Attr>
+</Id>
+<Id value='pieces_w' typref='462640250'>
+<Attr>
+<Pos l='24' c='37' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='25' c='28' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='25' c='17' s='1'/>
+</Attr>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='25' c='14' s='2'/>
+</Attr>
+</Id>
+<Id value='player_2' typref='3933013398'>
+<Attr>
+<Pos l='25' c='19' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='25' c='35' s='1'/>
+</Attr>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='25' c='32' s='2'/>
+</Attr>
+</Id>
+<Id value='pieces_b' typref='462640250'>
+<Attr>
+<Pos l='25' c='37' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='26' c='17' s='1'/>
+</Attr>
+<Id value='po' typref='2701647786'>
+<Attr>
+<Pos l='26' c='14' s='2'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos l='26' c='20' s='2'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos l='26' c='19' s='1'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='23' typref='2701647786'>
+<Attr>
+<Pos l='26' c='22' s='2'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Attr>
+<Pos l='27' c='17' s='2'/>
+</Attr>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='27' c='14' s='2'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='462640250'>
+<Attr>
+<Pos l='27' c='20' s='3'/>
+</Attr>
+<Id value='board' typref='3073067903'>
+<Attr>
+<Pos l='27' c='24' s='5'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Attr>
+<Pos l='27' c='36' s='2'/>
+</Attr>
+<Id value='po' typref='2701647786'>
+<Attr>
+<Pos l='27' c='33' s='2'/>
+</Attr>
+</Id>
+<Unary_Exp op='ran' typref='3603043417'>
+<Attr>
+<Pos l='27' c='39' s='3'/>
+</Attr>
+<Id value='board' typref='3073067903'>
+<Attr>
+<Pos l='27' c='43' s='5'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Operation_Call>
+<Attr>
+<Pos l='28' c='27' s='0'/>
+</Attr>
+<Name>
+<Id value='playing_piece'>
+<Attr>
+<Pos l='28' c='14' s='13'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='28' c='28' s='2'/>
+</Attr>
+</Id>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='28' c='32' s='2'/>
+</Attr>
+</Id>
+<Id value='po' typref='2701647786'>
+<Attr>
+<Pos l='28' c='36' s='2'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Attr>
+<Pos l='28' c='55' s='2'/>
+</Attr>
+<Variables>
+<Id value='last_player' typref='3933013398'>
+<Attr>
+<Pos l='28' c='43' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='28' c='58' s='2'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='move_piece'>
+<Attr>
+<Pos l='31' c='5' s='10' endLine='38'/>
+</Attr>
+<Input_Parameters>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='31' c='17' s='2'/>
+</Attr>
+</Id>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='31' c='21' s='2'/>
+</Attr>
+</Id>
+<Id value='po' typref='2701647786'>
+<Attr>
+<Pos l='31' c='25' s='2'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='32' c='15' s='1'/>
+</Attr>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='32' c='13' s='2'/>
+</Attr>
+</Id>
+<Id value='PLAYERS' typref='3369446765'>
+<Attr>
+<Pos l='32' c='17' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='32' c='30' s='2'/>
+</Attr>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='32' c='27' s='2'/>
+</Attr>
+</Id>
+<Id value='last_player' typref='3933013398'>
+<Attr>
+<Pos l='32' c='33' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='33' c='16' s='1'/>
+</Attr>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='33' c='13' s='2'/>
+</Attr>
+</Id>
+<Id value='PIECES' typref='462640250'>
+<Attr>
+<Pos l='33' c='18' s='6'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='33' c='30' s='1'/>
+</Attr>
+<Id value='po' typref='2701647786'>
+<Attr>
+<Pos l='33' c='27' s='2'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos l='33' c='33' s='2'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos l='33' c='32' s='1'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='23' typref='2701647786'>
+<Attr>
+<Pos l='33' c='35' s='2'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='34' c='28' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='34' c='17' s='1'/>
+</Attr>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='34' c='14' s='2'/>
+</Attr>
+</Id>
+<Id value='player_1' typref='3933013398'>
+<Attr>
+<Pos l='34' c='19' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='34' c='35' s='1'/>
+</Attr>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='34' c='32' s='2'/>
+</Attr>
+</Id>
+<Id value='pieces_w' typref='462640250'>
+<Attr>
+<Pos l='34' c='37' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='35' c='28' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='35' c='17' s='1'/>
+</Attr>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='35' c='14' s='2'/>
+</Attr>
+</Id>
+<Id value='player_2' typref='3933013398'>
+<Attr>
+<Pos l='35' c='19' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='35' c='35' s='1'/>
+</Attr>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='35' c='32' s='2'/>
+</Attr>
+</Id>
+<Id value='pieces_b' typref='462640250'>
+<Attr>
+<Pos l='35' c='37' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='36' c='24' s='1'/>
+</Attr>
+<Unary_Exp op='dom' typref='462640250'>
+<Attr>
+<Pos l='36' c='13' s='3'/>
+</Attr>
+<Id value='board' typref='3073067903'>
+<Attr>
+<Pos l='36' c='17' s='5'/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value='PIECES' typref='462640250'>
+<Attr>
+<Pos l='36' c='26' s='6'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Attr>
+<Pos l='36' c='38' s='2'/>
+</Attr>
+<Id value='po' typref='2701647786'>
+<Attr>
+<Pos l='36' c='35' s='2'/>
+</Attr>
+</Id>
+<Unary_Exp op='ran' typref='3603043417'>
+<Attr>
+<Pos l='36' c='41' s='3'/>
+</Attr>
+<Id value='board' typref='3073067903'>
+<Attr>
+<Pos l='36' c='45' s='5'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Operation_Call>
+<Attr>
+<Pos l='37' c='26' s='0'/>
+</Attr>
+<Name>
+<Id value='moving_piece'>
+<Attr>
+<Pos l='37' c='14' s='12'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='37' c='27' s='2'/>
+</Attr>
+</Id>
+<Id value='pi' typref='2882442911'>
+<Attr>
+<Pos l='37' c='31' s='2'/>
+</Attr>
+</Id>
+<Id value='po' typref='2701647786'>
+<Attr>
+<Pos l='37' c='35' s='2'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Attr>
+<Pos l='37' c='54' s='2'/>
+</Attr>
+<Variables>
+<Id value='last_player' typref='3933013398'>
+<Attr>
+<Pos l='37' c='42' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='pl' typref='3933013398'>
+<Attr>
+<Pos l='37' c='57' s='2'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='3933013398'>
+<Id value='PLAYERS'/>
+</Type>
+<Type id='3369446765'>
+<Unary_Exp op='POW'>
+<Id value='PLAYERS'/>
+</Unary_Exp>
+</Type>
+<Type id='2882442911'>
+<Id value='PIECES'/>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='462640250'>
+<Unary_Exp op='POW'>
+<Id value='PIECES'/>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3073067903'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='PIECES'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>
