@@ -7,8 +7,5 @@
         <component_file path="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas" name="Trilhas" suffix="mch" user="ohara">
             <component name="Trilhas" type="specification" />
         </component_file>
-        <component_file path="C:/Users/ohara/Documents/BTI/METODOS FORMAIS/Project/Trilhas" name="Trilhas_M" suffix="mch" user="ohara">
-            <component name="Trilhas_M" type="specification" />
-        </component_file>
     </project>
 </db_xml>
