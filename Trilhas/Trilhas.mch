@@ -68,11 +68,14 @@ OPERATIONS
                        or
                        
                        // olho para a esquerda (operação de -)
-                       ((board(last_piece) - 1) mod 8 : ran (board) & (board(last_piece) - 2) mod 8 : ran (board) &
-                        ((last_piece : pieces_w & 
-                            dom (board |> {(board(last_piece) - 1) mod 8, (board(last_piece) - 2) mod 8}) <: pieces_w) or
-                         (last_piece : pieces_b & 
-                            dom (board |> {(board(last_piece) - 1) mod 8, (board(last_piece) - 2) mod 8}) <: pieces_b))))
+                       (((((8 + (board(last_piece) - 1)) mod 8) : ran (board))) & ((((8 + (board(last_piece) - 1)) mod 8) : ran (board))) &
+                      
+                        ((last_piece : pieces_w & dom (board |> {
+                                     ((8 + (board(last_piece) - 1)) mod 8),
+                                     ((8 + (board(last_piece) - 2)) mod 8)}) <: pieces_w) or
+                         (last_piece : pieces_b & dom (board |> {
+                                     ((8 + (board(last_piece) - 1)) mod 8),
+                                     ((8 + (board(last_piece) - 2)) mod 8)}) <: pieces_b))) )
                     THEN mtds_available := {remove}
                     ELSE mtds_available := {play, move}
                     END
@@ -130,11 +133,14 @@ OPERATIONS
             IF (board(last_piece) < 8)                                  
             THEN
                 IF (// olha pra direita (+ 1) e olha pra esquerda (- 1) para ver se as peças são do mesmo set
-                    ((board(last_piece) + 1) mod 8 : ran (board) & (board(last_piece) - 1) mod 8 : ran (board) &
-                        ((last_piece : pieces_w & 
-                            dom (board |> {(board(last_piece) + 1) mod 8, (board(last_piece) - 1) mod 8}) <: pieces_w) or
-                         (last_piece : pieces_b & 
-                            dom (board |> {(board(last_piece) + 1) mod 8, (board(last_piece) - 1) mod 8}) <: pieces_b)))
+                    ( (board(last_piece) + 1) mod 8 : ran (board) & 
+                        
+                      (( ((8 + (board(last_piece) - 1)) mod 8) : ran (board))) &
+                   
+                      ((last_piece : pieces_w & dom (board |> {(board(last_piece) + 1) mod 8, 
+                                   ((8 + (board(last_piece) - 1)) mod 8)}) <: pieces_w) or
+                       (last_piece : pieces_b & dom (board |> {(board(last_piece) + 1) mod 8, 
+                                   ((8 + (board(last_piece) - 1)) mod 8)}) <: pieces_b)))
              
                     or
 
