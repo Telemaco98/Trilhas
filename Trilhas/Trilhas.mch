@@ -58,7 +58,7 @@ OPERATIONS
                  // se esta em uma posição par então é uma quina
                 IF (board(xx) mod 2 = 0)                      
                 THEN 
-                    // se a posição da peça estiver [0, 7] então ela pertence a camada 1 
+                    // se a posição da peça estiver [0, 7] então ela pertence a camada 0 
                     IF (board(xx) < 8)
                     THEN 
                         IF (// olho para a direita (operação de +)
@@ -89,7 +89,7 @@ OPERATIONS
                             END
 	                    END
                     ELSE
-                        // se a posição da peça estiver [8, 15] então ela pertence a camada 2
+                        // se a posição da peça estiver [8, 15] então ela pertence a camada 1
                         IF (board(xx) >= 8 & board(xx) < 16)
                         THEN
                             IF (// olho para a direita (operação de +)
@@ -104,11 +104,9 @@ OPERATIONS
                                // olho para a esquerda (operação de -)
                                ((board(xx) - 1) mod 8 + 8 : ran (board) & (board(xx) - 2) mod 8 + 8: ran (board) &
                                 ((xx : pieces_w & 
-                                    dom (board |> {(board(xx) - 1) mod 8 + 8, (board(xx) - 2) mod 8 + 8}) 
-                                        <: pieces_w) or
+                                    dom (board |> {(board(xx) - 1) mod 8 + 8, (board(xx) - 2) mod 8 + 8}) <: pieces_w) or
                                  (xx : pieces_b & 
-                                    dom (board |> {(board(xx) - 1) mod 8 + 8, (board(xx) - 2) mod 8 + 8}) 
-                                        <: pieces_w))))
+                                    dom (board |> {(board(xx) - 1) mod 8 + 8, (board(xx) - 2) mod 8 + 8}) <: pieces_b))))
                             THEN 
                                 IF (xx = last_piece)
                                 THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {remove}
@@ -121,7 +119,7 @@ OPERATIONS
                                 END
 	                        END
                                 
-                        // se não, então ela está entre [16, 23] e pertence a camada 3
+                        // se não, então ela está entre [16, 23] e pertence a camada 2
                         ELSE
                             IF (// olho para a direita (operação de +)
                                 (board(xx) + 1 : ran (board) & (board(xx) + 2) mod 8 + 16: ran (board) & 
@@ -154,7 +152,7 @@ OPERATIONS
                 
 	            // está em uma posição ímpar, é meio
 	            ELSE
-	                // se a posição da peça estiver [0, 7] então ela pertence a camada 1 
+	                // se a posição da peça estiver [0, 7] então ela pertence a camada 0
 	                IF (board(xx) < 8)                                  
 	                THEN
 	                    IF (// olha pra direita (+ 1) e olha pra esquerda (- 1) para ver se as peças são do mesmo set
@@ -187,7 +185,7 @@ OPERATIONS
                             END
 	                        END
 	                ELSE
-	                    // se a posição da peça estiver [8, 15] então ela pertence a camada 2
+	                    // se a posição da peça estiver [8, 15] então ela pertence a camada 1
 	                    IF (board(xx) >= 8 & board(xx) < 16)
 	                    THEN
 	                        IF (// olha pra direita (+ 1) e olha pra esquerda (- 1) para ver se as peças são do mesmo set
@@ -217,7 +215,7 @@ OPERATIONS
                                 END
 	                        END
 	    
-	                    // se não, então ela está entre [16, 23] e pertence a camada 3
+	                    // se não, então ela está entre [16, 23] e pertence a camada 2
 	                    ELSE
 	                        IF (// olha pra direita (+ 1) e olha pra esquerda (- 1) para ver se as peças são do mesmo set
 	                            ((board(xx) + 1) mod 8 + 16 : ran (board) & (board(xx) - 1) mod 8 + 16: ran (board) &
@@ -269,7 +267,7 @@ OPERATIONS
             
               // Se ele for uma quina, só pode mover para esquerda ou direita
               (((board(pi) mod 2 = 0) => //
-                 po : {(board(pi) + 1), (((8 + (board(pi) - 1)) mod 8) + (8 * board(pi))/8)}) &
+                 po : {(board(pi) + 1), (((8 + (board(pi) - 1)) mod 8) + (8 * (board(pi)/8)))}) &
              
               // Se a peça a ser movida estiver em no meio e pertence a camada 0 [0, 7]
               ((board(pi) mod 2 = 1 & (board(pi)/8) = 0) => 
@@ -277,11 +275,11 @@ OPERATIONS
              
               // Se a peça a ser movida estiver em no meio e pertence a camada 1 [8, 15]
               ((board(pi) mod 2 = 1 & (board(pi)/8) = 1) => 
-                 po : {(board(pi) - 1), (((board(pi) + 1) mod 8) + (8 * board(pi))/8), (board(pi) + 8), (board(pi) - 8)}) &
+                 po : {(board(pi) - 1), (((board(pi) + 1) mod 8) + (8 * (board(pi)/8))), (board(pi) + 8), (board(pi) - 8)}) &
 
               // Se a peça a ser movida estiver em no meio e pertence a camada 2 [16, 23]
               ((board(pi) mod 2 = 1 & (board(pi)/8) = 2) => 
-                 po : {(board(pi) - 1), (((board(pi) + 1) mod 8) + (8 * board(pi))/8), (board(pi) - 8)})) ) &
+                 po : {(board(pi) - 1), (((board(pi) + 1) mod 8) + (8 * (board(pi)/8))), (board(pi) - 8)})) ) &
 
             (last_piece : pieces_w) <=> (pi : pieces_b) &
             (removed_pieces \/ dom(board) = PIECES)
