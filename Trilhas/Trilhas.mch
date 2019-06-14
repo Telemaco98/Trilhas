@@ -6,13 +6,13 @@ MACHINE
     Trilhas
     
 SETS
-    PIECES; PLAYERS = {player_1, player_2}
+    PIECES; PLAYERS = {player_1, player_2}; METHODS = {play, move, remove}
 
 PROPERTIES
     card(PIECES) = 18
     
 VARIABLES
-    board, pieces_w, pieces_b, last_piece, removed_pieces, p_moinho, updated
+    board, pieces_w, pieces_b, last_piece, removed_pieces, p_moinho, updated, mtds_available
 
 INVARIANT
     board : PIECES >+> 0..23 &
@@ -21,10 +21,11 @@ INVARIANT
     pieces_b <: PIECES & card(pieces_b) = card(PIECES)/2 &
     last_piece : PIECES &
     removed_pieces <: PIECES &
-    p_moinho <: PIECES
+    p_moinho <: PIECES &
+    mtds_available <: METHODS
     
 INITIALISATION
-    board := {} || updated := {} || p_moinho := {} || removed_pieces := {} ||
+    board := {} || updated := {} || p_moinho := {} || removed_pieces := {} || mtds_available := {play, move} ||
     ANY xx, yy, zz
     WHERE xx <: PIECES & yy <: PIECES &
         card(xx) = 9 & card(yy) = 9 &
@@ -34,7 +35,7 @@ INITIALISATION
     
 OPERATIONS
     play_piece (pi, po) =
-        PRE last_piece /: p_moinho &
+        PRE play : mtds_available &
             dom(board) = dom(updated) &
             pi : PIECES & pi /: dom(board) & pi /: removed_pieces &
             (last_piece : pieces_w) <=> (pi : pieces_b) &
@@ -76,9 +77,17 @@ OPERATIONS
                                          ((8 + (board(xx) - 1)) mod 8),((8 + (board(xx) - 2)) mod 8)}) <: pieces_w) or
                              (xx : pieces_b & dom (board |> {
                                          ((8 + (board(xx) - 1)) mod 8),((8 + (board(xx) - 2)) mod 8)}) <: pieces_b))) )
-                        THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
-                        ELSE p_moinho := p_moinho - {last_piece} || updated := updated <+ {xx |-> TRUE}
-                        END
+                        THEN 
+                            IF (xx = last_piece)
+                            THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {remove}
+                            ELSE p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
+                            END
+                        ELSE
+                            IF (xx = last_piece)
+                            THEN p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {play, move}
+                            ELSE p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE}
+                            END
+	                    END
                     ELSE
                         // se a posição da peça estiver [8, 15] então ela pertence a camada 2
                         IF (board(xx) >= 8 & board(xx) < 16)
@@ -100,9 +109,17 @@ OPERATIONS
                                  (xx : pieces_b & 
                                     dom (board |> {(board(xx) - 1) mod 8 + 8, (board(xx) - 2) mod 8 + 8}) 
                                         <: pieces_w))))
-                            THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
-                            ELSE p_moinho := p_moinho - {last_piece} || updated := updated <+ {xx |-> TRUE}
-                            END
+                            THEN 
+                                IF (xx = last_piece)
+                                THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {remove}
+                                ELSE p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
+                                END
+                            ELSE
+                                IF (xx = last_piece)
+                                THEN p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {play, move}
+                                ELSE p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE}
+                                END
+	                        END
                                 
                         // se não, então ela está entre [16, 23] e pertence a camada 3
                         ELSE
@@ -121,9 +138,17 @@ OPERATIONS
                                         dom (board |> {(board(xx) - 1) mod 8 + 16, (board(xx) - 2) mod 8 + 16}) <: pieces_w) or
                                      (xx : pieces_b & 
                                         dom (board |> {(board(xx) - 1) mod 8 + 16, (board(xx) - 2) mod 8 + 16}) <: pieces_b))))
-                            THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
-                            ELSE p_moinho := p_moinho - {last_piece} || updated := updated <+ {xx |-> TRUE}
-                            END
+                            THEN 
+                                IF (xx = last_piece)
+                                THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {remove}
+                                ELSE p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
+                                END
+                            ELSE
+                                IF (xx = last_piece)
+                                THEN p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {play, move}
+                                ELSE p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE}
+                                END
+	                        END
                         END
                     END
                 
@@ -150,9 +175,17 @@ OPERATIONS
 	                                dom (board |> {(board(xx) + 8), (board(xx) + 16)}) <: pieces_w) or
 	                             (xx : pieces_b & 
 	                                dom (board |> {(board(xx) + 8), (board(xx) + 16)}) <: pieces_b))))
-                        THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
-                        ELSE p_moinho := p_moinho - {last_piece} || updated := updated <+ {xx |-> TRUE}
-	                    END
+                        THEN 
+                            IF (xx = last_piece)
+                            THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {remove}
+                            ELSE p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
+                            END
+                        ELSE
+                            IF (xx = last_piece)
+                            THEN p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {play, move}
+                            ELSE p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE}
+                            END
+	                        END
 	                ELSE
 	                    // se a posição da peça estiver [8, 15] então ela pertence a camada 2
 	                    IF (board(xx) >= 8 & board(xx) < 16)
@@ -172,8 +205,16 @@ OPERATIONS
 	                                    dom (board |> {board(xx) - 8, board(xx) + 8}) <: pieces_w) or 
 	                                 (xx : pieces_b & 
 	                                    dom (board |> {board(xx) - 8, board(xx) + 8}) <: pieces_b))))
-                            THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
-                            ELSE p_moinho := p_moinho - {last_piece} || updated := updated <+ {xx |-> TRUE}
+                            THEN 
+                                IF (xx = last_piece)
+                                THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {remove}
+                                ELSE p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
+                                END
+                            ELSE
+                                IF (xx = last_piece)
+                                THEN p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {play, move}
+                                ELSE p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE}
+                                END
 	                        END
 	    
 	                    // se não, então ela está entre [16, 23] e pertence a camada 3
@@ -193,8 +234,16 @@ OPERATIONS
 	                                    dom (board |> {(board(xx) - 8), (board(xx) - 16)}) <: pieces_w) or
 	                                 (xx : pieces_b & 
 	                                    dom (board |> {(board(xx) - 8), (board(xx) - 16)}) <: pieces_b))))
-                            THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
-                            ELSE p_moinho := p_moinho - {last_piece} || updated := updated <+ {xx |-> TRUE}
+                            THEN 
+                                IF (xx = last_piece)
+                                THEN p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {remove}
+                                ELSE p_moinho := p_moinho \/ {xx} || updated := updated <+ {xx |-> TRUE}
+                                END
+                            ELSE
+                                IF (xx = last_piece)
+                                THEN p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE} || mtds_available := {play, move}
+                                ELSE p_moinho := p_moinho - {xx} || updated := updated <+ {xx |-> TRUE}
+                                END
 	                        END
 	                    END
 	                END
@@ -208,32 +257,32 @@ OPERATIONS
      * in the board or in the removed set
      */
     move_piece (pi, po) =
-        PRE last_piece /: p_moinho &
+        PRE move : mtds_available &
+            last_piece /: p_moinho &
             dom(board) = dom(updated) &
             pi : PIECES & pi : dom(board) & pi /: removed_pieces &
             (last_piece : pieces_w) <=> (pi : pieces_b) &
             po : 0..23 & po /: ran(board) &
             
-            (((pi : pieces_w & card(dom(board) /\ pieces_w) >= 3) or
-              (pi : pieces_b & card(dom(board) /\ pieces_b) >= 3)) <=>
+            (((pi : pieces_w & card(dom(board) /\ pieces_w) > 3) or
+              (pi : pieces_b & card(dom(board) /\ pieces_b) > 3)) =>
             
               // Se ele for uma quina, só pode mover para esquerda ou direita
-              (((board(pi) mod 2 = 0) => 
-                 po : {(board(pi) + 1), (((board(pi) + 1) mod 8) + (8 * board(pi))/8)}) &
+              (((board(pi) mod 2 = 0) => //
+                 po : {(board(pi) + 1), (((8 + (board(pi) - 1)) mod 8) + (8 * board(pi))/8)}) &
              
               // Se a peça a ser movida estiver em no meio e pertence a camada 0 [0, 7]
-              ((board(pi) mod 2 = 1 & (board(pi)/8) = 1) => 
-                 po : {(board(pi) - 1), (((board(pi) + 1) mod 8) + (8 * board(pi))/8), (board(pi) + 8), (board(pi) - 8)}) &
+              ((board(pi) mod 2 = 1 & (board(pi)/8) = 0) => 
+                 po : {(board(pi) + 1) mod 8, ((8 + (board(pi) - 1)) mod 8), (board(pi) + 8)}) &
              
               // Se a peça a ser movida estiver em no meio e pertence a camada 1 [8, 15]
               ((board(pi) mod 2 = 1 & (board(pi)/8) = 1) => 
                  po : {(board(pi) - 1), (((board(pi) + 1) mod 8) + (8 * board(pi))/8), (board(pi) + 8), (board(pi) - 8)}) &
 
               // Se a peça a ser movida estiver em no meio e pertence a camada 2 [16, 23]
-              ((board(pi) mod 2 = 1 & (board(pi)/8) = 1) => 
-                 po : {(board(pi) - 1), (((board(pi) + 1) mod 8) + (8 * board(pi))/8), (board(pi) - 8), (board(pi) - 8)})) ) &
-            
-            
+              ((board(pi) mod 2 = 1 & (board(pi)/8) = 2) => 
+                 po : {(board(pi) - 1), (((board(pi) + 1) mod 8) + (8 * board(pi))/8), (board(pi) - 8)})) ) &
+
             (last_piece : pieces_w) <=> (pi : pieces_b) &
             (removed_pieces \/ dom(board) = PIECES)
         THEN board := (board <+ {pi |-> po}) || 
@@ -244,15 +293,19 @@ OPERATIONS
     /*
      * Removing a oponent piece of the board
      */
-    remove_piece (pi) =
-        PRE last_piece : p_moinho &
+    remove_piece (pp) =
+        PRE remove : mtds_available &
+            last_piece : p_moinho &
             dom(board) = dom(updated) &
-            pi : PIECES & pi : dom(board) & pi /: removed_pieces &
-            (last_piece : pieces_w) <=> (pi : pieces_b) &
-            ((pi : p_moinho & pi : pieces_w) <=> (!xx.((xx : PIECES & xx : dom(board) & xx : pieces_w) => xx : p_moinho))) &
-            ((pi : p_moinho & pi : pieces_w) <=> (!xx.((xx : PIECES & xx : dom(board) & xx : pieces_b) => xx : p_moinho)))
-        THEN board := board - {pi |-> board(pi)} || 
-             p_moinho := p_moinho - {pi} ||
-             removed_pieces := removed_pieces \/ {pi}
+            pp : PIECES & pp : dom(board) & pp /: removed_pieces & pp /= last_piece &
+            (last_piece : pieces_w) <=> (pp : pieces_b) &
+                
+            ((pp : pieces_w) => (pp : p_moinho <=> (!xx . ((xx : pieces_w & xx : dom(board)) => xx : p_moinho)))) &
+            ((pp : pieces_b) => (pp : p_moinho <=> (!xx . ((xx : pieces_b & xx : dom(board)) => xx : p_moinho))))
+        THEN updated := updated - {pp |-> TRUE} || 
+             board := board - {pp |-> board(pp)} || 
+             p_moinho := p_moinho - {pp} ||
+             removed_pieces := removed_pieces \/ {pp} ||
+             mtds_available := {play, move}
         END
 END
