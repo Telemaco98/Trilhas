@@ -258,7 +258,7 @@ OPERATIONS
         PRE move : mtds_available &
             dom(board) = dom(updated) &
             pi : PIECES & pi : dom(board) & pi /: removed_pieces &
-            (last_piece : pieces_w) <=> (pi : pieces_b) &
+            (last_piece : pieces_w) <=> (pi : pieces_b) &z
             po : 0..23 & po /: ran(board) &
             
             (((pi : pieces_w & card(dom(board) /\ pieces_w) > 3) or
