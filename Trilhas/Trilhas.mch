@@ -256,7 +256,6 @@ OPERATIONS
      */
     move_piece (pi, po) =
         PRE move : mtds_available &
-            last_piece /: p_moinho &
             dom(board) = dom(updated) &
             pi : PIECES & pi : dom(board) & pi /: removed_pieces &
             (last_piece : pieces_w) <=> (pi : pieces_b) &
