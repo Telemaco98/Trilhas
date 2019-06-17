@@ -6,7 +6,7 @@ MACHINE
     Trilhas
     
 SETS
-    PIECES; PLAYERS = {player_1, player_2}; METHODS = {play, move, remove}
+    PIECES; METHODS = {play, move, remove}
 
 PROPERTIES
     card(PIECES) = 18
@@ -258,7 +258,7 @@ OPERATIONS
         PRE move : mtds_available &
             dom(board) = dom(updated) &
             pi : PIECES & pi : dom(board) & pi /: removed_pieces &
-            (last_piece : pieces_w) <=> (pi : pieces_b) &z
+            (last_piece : pieces_w) <=> (pi : pieces_b) & 
             po : 0..23 & po /: ran(board) &
             
             (((pi : pieces_w & card(dom(board) /\ pieces_w) > 3) or
